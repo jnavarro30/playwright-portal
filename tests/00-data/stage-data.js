@@ -1,6 +1,9 @@
 class StageData {
-    get CareManager() {
+    get CareManagerFirstName() {
         return 'Carlos';
+    }
+    get CareManagerLastName() {
+        return 'Marquez';
     }
     get CareManagerEmail() {
         return 'jesse.cg@independa.com';
