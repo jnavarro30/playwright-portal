@@ -6,6 +6,11 @@ test("log in", async ({ page }) => {
   await expect(page).toHaveURL(/.*dashboard/);
 });
 
+test("incorrect log in", async ({ page }) => {
+  await Login.incorrectLogIn(page);
+  await expect(page.getByText('Incorrect code. Please enter')).toBeVisible();
+});
+
 // unable to find, icons blocking Resend Text link
 // test("resend code", async ({ page }) => {
 //   await page.goto("https://portal-stage.independa.com/");
